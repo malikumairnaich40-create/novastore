@@ -1,0 +1,23 @@
+# Modern Multi-Category E-Commerce Platform .htaccess
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /ecommerce_store/
+
+    # Disable directory listings
+    Options -Indexes
+
+    # Set default character set
+    AddDefaultCharset UTF-8
+
+    # Prevent direct access to sensitive config files
+    <FilesMatch "^(config\.php|db\.php|\.env|database\.sql)$">
+        # Allow inclusion in PHP scripts, but block direct browser download
+    </FilesMatch>
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

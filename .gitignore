@@ -1,0 +1,16 @@
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.vscode/
+.idea/
+
+# Environment
+.env
+
+# Keep upload directories
+assets/uploads/products/*
+!assets/uploads/products/.gitkeep
+assets/uploads/categories/*
+!assets/uploads/categories/.gitkeep
